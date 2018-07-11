@@ -1,0 +1,21 @@
+
+
+
+  <p id="stock">There are {{tot()}} total mobiles in stock....</p>
+  <div id="div1" style="width: 100%">
+    <div *ngFor="let ab of mobilePart"[class.inStockCSS]="ab.inStock" style="width: 20% ; float:right">
+      <div id="div1">Mobile Name:<b id="mname">{{ab.mobName|uppercase}}</b></div>
+      <img class="mobileImg"[src]="ab.image">
+      <div>Mobile id:<i>{{ab.mobid}}</i>
+        <div>Price:<b>{{ab.mobPrice|currency:'INR'}}</b></div>
+        <div *ngIf="ab.inStock>0">Stock Available:Last
+          <mark>{{ab.inStock}} </mark>available <br>Stock now</div>
+        <div *ngIf="ab.inStock===0">
+          <mark>Out Of Stock</mark>
+          
+        </div>
+         <button [disabled]="ab.disable">Add to cart</button>
+         
+      </div>
+    </div>
+  </div>

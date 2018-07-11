@@ -1,0 +1,38 @@
+
+
+#mname{
+	color: #91375C;
+}
+#div1{
+	display: inline-block;
+}
+p{
+	color: #4c4a40;
+	text-shadow: 1px 1px black;
+	font-family: 'Source Sans Pro',sans-serif;
+	font-size: 18px;
+	line-height: 32px;
+	margin: 0 0 24px;
+	font-weight: bold;
+}
+ul{
+	list-style-type: none;
+	width: 60%;
+	margin: auto;
+	border: 1px solid black;
+}
+li{
+	background-color: #CCCCC;
+	box-shadow:2px 2px 7px orange;
+	padding: 10px;
+	margin: 20px; 
+
+}
+
+.inStockCSS{
+	background-color:grey;
+}
+.mobileImg{
+	
+	width: 100px;
+}
