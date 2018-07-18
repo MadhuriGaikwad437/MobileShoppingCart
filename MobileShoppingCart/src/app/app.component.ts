@@ -5,6 +5,6 @@ import {Component} from '@angular/core';
 	styleUrls:['app.component.css']
 })
  export class FirstComponent{
- 	title="Mobile Shopee...";
+ 	title="Electronic E-Commerce";
  }
  	

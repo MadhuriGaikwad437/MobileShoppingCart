@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{MobPart} from './mob-parts';
 import {MOBPART} from './mocks';
+import { MobDataService } from './mob-data.service';
 
 
 @Component({
@@ -11,10 +12,14 @@ import {MOBPART} from './mocks';
 export class MobilesComponent implements OnInit {
 
 	mobilePart:MobPart[];
-  constructor() {}
+  constructor(private mobDataService:MobDataService) {}
 
   ngOnInit() {
-  	this.mobilePart=MOBPART;
+  	//this.mobilePart=MOBPART;//dummy data call mocks
+   /* let mobDataService=new MobDataService();
+    this.mobilePart=mobDataService.getParts();*///it is for Database of our own db like sql
+
+   this.mobilePart = this.mobDataService.getParts();
   }
   	
   // 	totalStock(){
@@ -48,7 +53,7 @@ export class MobilesComponent implements OnInit {
       // alert("UP quant");
         if(uq.quantity<uq.inStock)
       uq.quantity++;
-     console.log(uq.quantity);
+    // console.log(uq.quantity);
 
 
      }

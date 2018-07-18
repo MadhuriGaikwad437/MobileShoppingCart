@@ -1,0 +1,13 @@
+<h1>lapi starts.....</h1>
+<p>LAptop are...</p>
+<div class="container">
+	<div class="row" style="border" >
+<div class="col-sm-3" *ngFor="let result of laptops" >
+	<img class="LapiImg" [src]="result.image">
+	<div>Name:<b>{{result.name|uppercase}}</b></div>
+	<div>Model No:{{result.modelno}}</div>
+	<div>Price{{result.price|currency:'INR'}}</div>
+	<div *ngIf result.inStock>0>there are <mark>{{result.inStock}}</mark>laptops available</div>
+</div>
+</div>
+</div>
